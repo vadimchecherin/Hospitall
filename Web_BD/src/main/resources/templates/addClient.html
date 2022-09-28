@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавление клиетна</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+    <body>
+    <header th:insert="blocks/header :: header"></header>
+        <h3>Добавляем клиетна</h3>
+
+            <div class="container mt-5" mb-5>
+                    <form action="addClient" method="post">
+
+                        <div class="text-info container col-md-9" mb-3>
+                            <div class="row mb-4 text-info">
+                                <label class="col-sm-3 col-form-label">Фамилия Имя Отчество</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="FIO" placeholder="Введите ваше ФИО" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-info container col-md-9" mb-3>
+                            <div class="row mb-4 text-info">
+                                <label class="col-sm-3 col-form-label">Введите ваше Пол</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="Sex" placeholder="Введите ваше Пол" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-info container col-md-9" mb-3>
+                            <div class="row mb-4 text-info">
+                                <label class="col-sm-3 col-form-label">Введите дату рождения</label>
+                                <div class="col-sm-5">
+                                    <input type="date" name="Date_of_Birthday" id="databrth" placeholder="Введите дату рождения" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-info container col-md-9" mb-3>
+                            <div class="row mb-4 text-info">
+                                <label class="col-sm-3 col-form-label">Дата регистрации клиента</label>
+                                <div class="col-sm-5">
+                                    <input type="date" name="Date_of_Reg" size="25" placeholder="Дата регистрации клиента" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-info container col-md-9" mb-3>
+                            <div class="row mb-4 text-info">
+                                <label class="col-sm-3 col-form-label">Данные пасспорта</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="passport" placeholder="Пасспорт" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Добавить клиента</button><br>
+                    </form>
+            </div>
+
+        <div th:insert="blocks/footer :: footer"> </div>
+    </body>
+</html>
